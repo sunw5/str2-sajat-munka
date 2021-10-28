@@ -1,0 +1,119 @@
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* The Modal  */
+@media only screen and (min-width: 560px) {
+  .modal-content {
+    width: 50%;
+  }  
+ }
+ 
+ @media only screen and (max-width: 559px) {
+   .modal-content {
+     width: 100%;
+   }  
+  }
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;  
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.modal-content-close {
+  animation-name: animateout;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animateout {
+  from {top:0; opacity:1}
+  to {top:-300px; opacity:0}
+}
+
+/* The Close Button */
+#closeModal {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#closeModal:hover,
+#closeModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 1px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-footer .button-container {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+}
+
+.modal-footer .btn {
+  border-radius: 10%;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: .1rem;
+  padding: .3rem .5rem;
+  border-color:#648f7b7c; 
+  font-weight: bold;  
+}
+
+.modal-footer .btn-ok {
+  background-color: #198754;
+}
+
+.modal-footer .btn-cancel {
+  background-color: #dc3545;
+}
