@@ -17,6 +17,7 @@
   /* width: 100px; */
   line-height: 100px;
   text-align: center;
+  color: white;
 }
 
 .cell[data-row="0"] {
