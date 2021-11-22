@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@font-face {
+  font-family: 'Game of Thrones';
+  src: url('../fonts/Game of Thrones.ttf');
+}
+
+html, body {
+  /* height: 100%; */
+  margin: 0;
+}
+.main-container {
+  display: grid;
+  grid-template-columns: 4fr 310px;
+  height: 100vh;
+}
+
+.main-content {
+  position: relative;
+  display: flex;  
+  flex-wrap: wrap; 
+}
+
+.main-content::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;    
+  z-index: -1;  
+  background-image: url('../assets/site/mapblue.jpg');
+  background-size: 110%;
+  /* background-position: 30% 20%; */
+}
+
+.main-content div {
+  padding-top: 10px;
+  width: 12%;
+  min-width: 115px;
+  min-height: 91px;
+  text-align: center;
+}
+
+.main-content img { 
+  width: 50px;
+  height: 50px;
+}
+
+.main-content p { 
+  margin: 0;
+}
+
+.sidebar-container {
+  background-color: #39393a;
+}
+
+.sidebar {  
+  color: #fff;
+  top: 0;
+  position: sticky;
+  /* padding: 0 5px;   */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.sidebar-top, .sidebar-bottom { 
+  margin: 5px 5px 10px 5px;
+}
+
+.sidebar button {
+  cursor: pointer;
+}
+
+.sidebar h3 {
+  font-family: 'Game of Thrones';
+  text-align: center;
+  margin-top: 2rem;  
+}
+
+#charPic {
+  width: 100%;
+  max-width: 300px;
+  /* min-height: 170px; */
+}
+
+#charBio {  
+  /* font-family:'Source Sans Pro', sans-serif; */
+  font-family:'Roboto', sans-serif;
+}
+
+#housePic {
+  float: right;
+}
+
+#charName {
+  display: inline-block;
+  font-size: 1.1rem;
+}
+
+.sidebar-bottom {
+  margin-bottom: 10px;
+}
+
+#btn-sidebar {
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid #fff;
+  padding: 2px 6px 1px;
+}
+
+#btn-search, #search {
+  float: right;
+  padding: 2px 3px;
+  border: none;
+  background-color: white;
+}
+
+#search {
+  outline: none;
+}
+
+#btn-search {
+  /* font-size: inherit; */    
+}
+
