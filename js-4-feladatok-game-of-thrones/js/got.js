@@ -1,12 +1,16 @@
-const getCaracters = async (url = '../json/got.json') => {
+/*  
+  super messy code but I don't have time to refactor or even better rewrite it
+  from scratch for now 
+*/
+
+const getCaracters = async (url = './json/got.json') => {
   try {
     const response = await fetch(url);
     const dataRaw = await response.json();
     const dataFiltered = customFilter(dataRaw);
-    const dataSorted = sortByName(dataFiltered);
-    //console.log(dataSorted);
+    const dataSorted = sortByName(dataFiltered);    
     renderPortraits(dataSorted);
-    createSearchListener(dataSorted);    
+    createSearchListeners(dataSorted);
   } catch (err) {
     console.error(err);
   }
@@ -42,38 +46,64 @@ const renderPortraits = (arr = [{}]) => {
     div.appendChild(img);
     div.appendChild(p);
     target.appendChild(div);
-    div.addEventListener('click', (event) => {clickHandler(item, event)}); //todo: event not need to pass
+    div.addEventListener('click', () => {
+      clickHandler(item, div)
+    }); 
   })
 }
 
-const clickHandler = (item, event) => {
+const clickHandler = (item, elem) => {
   const charPic = document.querySelector('#charPic');
   const charName = document.querySelector('#charName');
   const charBio = document.querySelector('#charBio');
   const housePic = document.querySelector('#housePic');
   const house = item.house || item.organization || '';
 
-  charPic.setAttribute('src', `../${item.picture || ''}`); //todo: placeholder for
-  charName.textContent = item.name || 'Character not found';  
-  if(house) housePic.setAttribute('src', `../assets/houses/${house}.png`)
+  charPic.setAttribute('src', `./${item.picture || './assets/pictures/got-placeholder.jpg'}`);
+  charName.textContent = item.name || 'Character not found';
+  if (house) housePic.setAttribute('src', `./assets/houses/${house}.png`)
   else housePic.setAttribute('src', '');
-  charBio.textContent = item.bio || '';
+  charBio.textContent = item.bio || '';   
+  toggleActive(elem);
+  if (elem) elem.scrollIntoViewIfNeeded();
 }
 
-const createSearchListener = (arr = [{}]) => {
+const createSearchListeners = (arr = [{}]) => {
   const btnSearch = document.querySelector('#btn-search');
   const searchInput = document.querySelector('#search');
-  btnSearch.addEventListener('click', (event) => {searchHandler(arr, event)}); //todo: event
-  searchInput.addEventListener('keyup', (event) => {
-    if(event.key === 'Enter') searchHandler(arr, event);
+  btnSearch.addEventListener('click', () => {
+    searchHandler(arr)
+  });
+  searchInput.addEventListener('keyup', () => {
+    if (event.key === 'Enter') searchHandler(arr);
   })
 }
 
-const searchHandler = (charList, event) => {
-  const searchInput = document.querySelector('#search');  
+const searchHandler = (charList) => {
+  const searchInput = document.querySelector('#search');
   const item = charList.filter(char => char.name.toLowerCase() === searchInput.value.toLowerCase())[0];
-  
-  item ? clickHandler(item) : clickHandler({});
+
+  if (item) {
+    const elem = getElemByCharName(item.name);
+    clickHandler(item, elem)
+  } else clickHandler({}, '');    
 }
+
+const getElemByCharName = (name) => {
+  const elems = [...document.querySelectorAll('.main-content div')];
+  const elem = elems.filter(elem => elem.querySelector('p').textContent === name)[0];
+  return elem;
+}
+
+const activeHandler = () => {
+  let lastActive;
+  return function(elem) {    
+    if (lastActive) lastActive.classList.toggle('active');
+    if (elem) elem.classList.toggle('active');
+    lastActive = elem;    
+  }  
+}
+
+const toggleActive = activeHandler();
 
 getCaracters();

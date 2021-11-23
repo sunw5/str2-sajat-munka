@@ -6,10 +6,11 @@
   src: url('../fonts/Game of Thrones.ttf');
 }
 
-html, body {
-  /* height: 100%; */
+html,
+body {
   margin: 0;
 }
+
 .main-container {
   display: grid;
   grid-template-columns: 4fr 310px;
@@ -18,16 +19,16 @@ html, body {
 
 .main-content {
   position: relative;
-  display: flex;  
-  flex-wrap: wrap; 
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .main-content::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 100%;    
-  z-index: -1;  
+  height: 100%;
+  z-index: -1;
   background-image: url('../assets/site/mapblue.jpg');
   background-size: 110%;
   /* background-position: 30% 20%; */
@@ -41,12 +42,17 @@ html, body {
   text-align: center;
 }
 
-.main-content img { 
+.main-content div:hover,
+div.active {
+  font-weight: bold;
+}
+
+.main-content img {
   width: 50px;
   height: 50px;
 }
 
-.main-content p { 
+.main-content p {
   margin: 0;
 }
 
@@ -54,18 +60,18 @@ html, body {
   background-color: #39393a;
 }
 
-.sidebar {  
+.sidebar {
   color: #fff;
   top: 0;
   position: sticky;
-  /* padding: 0 5px;   */
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
 }
 
-.sidebar-top, .sidebar-bottom { 
+.sidebar-top,
+.sidebar-bottom {
   margin: 5px 5px 10px 5px;
 }
 
@@ -76,18 +82,16 @@ html, body {
 .sidebar h3 {
   font-family: 'Game of Thrones';
   text-align: center;
-  margin-top: 2rem;  
+  margin-top: 2rem;
 }
 
 #charPic {
   width: 100%;
   max-width: 300px;
-  /* min-height: 170px; */
 }
 
-#charBio {  
-  /* font-family:'Source Sans Pro', sans-serif; */
-  font-family:'Roboto', sans-serif;
+#charBio {
+  font-family: 'Roboto', sans-serif;
 }
 
 #housePic {
@@ -110,7 +114,8 @@ html, body {
   padding: 2px 6px 1px;
 }
 
-#btn-search, #search {
+#btn-search,
+#search {
   float: right;
   padding: 2px 3px;
   border: none;
@@ -121,7 +126,10 @@ html, body {
   outline: none;
 }
 
-#btn-search {
-  /* font-size: inherit; */    
+#btn-search:hover {
+  background-color: bisque;
 }
 
+.test {
+  background-color: blue;
+}
