@@ -21,6 +21,7 @@ body {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .main-content::before {
@@ -68,6 +69,12 @@ div.active {
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
+}
+
+@media only screen and (max-height:500px) {
+  .sidebar {
+    position: relative;
+  }
 }
 
 .sidebar-top,
