@@ -1,0 +1,16 @@
+.container {
+  margin-top: 20px;
+}
+
+.bi-wrench {  
+  color: green;
+}
+
+/* .bi-wrench.bi::before {  
+  font-weight: bold;
+}
+ */
+
+ input:invalid {
+  background-color: seashell;
+}
