@@ -94,16 +94,16 @@
               <input type="text" class="form-control" id="Address2" placeholder="Apartment or suite">
             </div>
             <div class="mb-3 col-sm-5">
-              <label for="Country" class="form-label">Country</label>
-              <select class="form-select" aria-label="Default select example" id="Country">
+              <label for="country" class="form-label">Country</label>
+              <select id="country" class="form-select" aria-label="Default select example" onchange="changeStates()">
                 <option selected>Choose...</option>
-                <option value="US">USA</option>
+                <option value="USA">USA</option>
                 <option value="HU">Magyarország</option>
               </select>
             </div>
             <div class="mb-3 col-sm-4">
-              <label for="State" class="form-label">State</label>
-              <select class="form-select" aria-label="Default select example" id="State">
+              <label for="states" class="form-label">State</label>
+              <select id="states" class="form-select" aria-label="Default select example">
                 <option selected>Choose...</option>
               </select>
             </div>
@@ -183,6 +183,7 @@
     crossorigin="anonymous">
   </script>
   -->
+  <script src= "./main.js"></script>
 </body>
 
 </html>
