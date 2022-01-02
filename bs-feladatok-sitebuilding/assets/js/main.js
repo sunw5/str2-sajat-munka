@@ -5,6 +5,11 @@ let scrolled = false;
 const links = document.querySelectorAll(".navbar-collapse ul a");
 window.onscroll = NavbarOnScroll;
 
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
 for (const link of links) {
   link.addEventListener("click", clickHandlerOfNavbarLinks);
 }
