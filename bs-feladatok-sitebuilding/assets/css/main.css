@@ -28,6 +28,10 @@ footer {
   font-size: x-small;
 }
 
+.fs-small {
+  font-size: small;
+}
+
 .navbar {
   padding-left: 14%;
   padding-right: 18%;
@@ -83,7 +87,7 @@ footer {
 .btn-white {
   color: white;
   border: 1px solid white;
-  font-size: xx-small;
+  font-size: small;
   transition: all 0.3s;
 }
 
@@ -126,10 +130,6 @@ footer {
   padding-top: 25%;
   padding-left: 15%;
   padding-bottom: 20%;
-}
-
-.btn-transparent {
-  border: 1px solid white;
 }
 
 .icon-container {
