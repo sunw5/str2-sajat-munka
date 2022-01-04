@@ -1,0 +1,43 @@
+@use '../abstracts'as *;
+
+#features {
+  hr {
+    background: linear-gradient(to right, var('colors.gradientStart'), var('colors.gradientEnd'));
+    margin: 0;
+  }
+
+  i {
+    color: var('colors.iconRed');
+
+    &.icon::before {
+      font-size: 4rem;
+    }
+  }
+
+  .features__main-container {
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+
+    .features__inner-container {
+      justify-content: center;
+      align-items: center;
+
+      .features__phone-container {
+        @include phone;
+      }
+
+      .features__icon-container {
+        div {
+          @media (min-width: 576px) {
+            padding-top: 3rem;
+          }
+          h3 {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

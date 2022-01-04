@@ -1,0 +1,30 @@
+@use '../abstracts' as *;
+
+.download {
+  background: var('colors.yellow');
+  img.google-badge {
+    width: 135px;
+  }
+
+  .row {
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    .download__text-container {
+      text-align: center;
+    }
+
+    .download__link-container {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+
+        img {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

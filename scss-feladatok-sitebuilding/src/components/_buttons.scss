@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.btn-white {
+  color: var('colors.white');
+  border: 1px solid var('colors.white');
+  font-size: small;
+  border-radius: 50rem;
+  background-color: transparent;
+  user-select: none;
+
+  transition: all 0.3s;
+
+  &:hover {
+    color: var('colors.white');
+    background-color: var('colors.yellow');
+    border: 1px solid var('colors.yellow');
+  }
+}
+

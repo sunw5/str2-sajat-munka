@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+/* font family */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+  font-family: var('fonts.Catamaran'), var('fonts.fallback');
+}
+
+.nav-link,
+button {
+  font-family: var('fonts.Lato'), var('fonts.fallback');
+}
+
+p,
+footer {
+  font-family: var('fonts.Muli'), var('fonts.fallback');
+}
+
+/* font size */
+.big-font {
+  font-size: calc(1.475rem + 2.7vw);
+}
+
+h2 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+h3, .h3 {  
+    font-size: calc(1.275rem + .3vw); 
+}
+
+/* font weight */
+.font-light {
+  font-weight: 300;
+}
+
+/* font color */
+.txt-muted {
+  color: var('colors.txt-muted');
+}

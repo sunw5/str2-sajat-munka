@@ -1,0 +1,26 @@
+@use '../abstracts' as *;
+
+.contact {
+  background: var('colors.yellow');
+
+  &__container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+  }
+
+  &__socials-container {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: var('colors.white');
+
+      i {
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

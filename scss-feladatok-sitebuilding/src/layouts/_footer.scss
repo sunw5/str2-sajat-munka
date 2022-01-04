@@ -1,0 +1,17 @@
+@use '../abstracts'as *;
+
+footer {
+  background-color: var('colors.bg-dark');
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: var('colors.yellow') !important;
+    }
+  }
+}

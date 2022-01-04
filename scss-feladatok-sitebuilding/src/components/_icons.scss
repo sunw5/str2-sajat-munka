@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.icon-container {
+  width: 3rem;
+  height: 3rem;
+}
+
+.fa-twitter {  
+  @include icon-color(var('colors.twitter'));
+}
+
+.fa-facebook-f {
+  @include icon-color(var('colors.facebook'));
+  color: white;
+}
+
+.fa-google-plus-g {
+  @include icon-color(var('colors.google'));
+}

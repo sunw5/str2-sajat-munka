@@ -1,0 +1,31 @@
+@use 'variables'as *;
+@use 'functions'as *;
+
+@mixin icon-color($base) {
+  background-color: scale-color($base, $alpha: -10%);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: $base;
+  }
+}
+
+@mixin phone {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  div {
+    position: relative;
+
+    .phone-outer {
+      width: 100%;
+    }
+
+    .phone-inner {
+      position: absolute;
+      top: 11%;
+      left: 6%;
+      width: 89%;
+    }
+  }
+}

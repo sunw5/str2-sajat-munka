@@ -1,0 +1,16 @@
+@use '../abstracts'as *;
+
+.getStarted {
+  background: var('colors.grayLight') url(var('images.getStarted'));
+  background-blend-mode: darken;
+  background-size: 100%;
+
+  /* background-position: 0px -135px; */
+  /* padding-bottom: 31%; */
+  .getStarted__text-container {
+    padding-top: 25%;
+    padding-left: 15%;
+    padding-bottom: 20%;
+    color: var('colors.white');
+  }
+}

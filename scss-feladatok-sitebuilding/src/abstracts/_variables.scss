@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+$config: (
+  colors: (
+    "black": black,
+    "bg-dark": rgb(33, 37, 41),
+    "white": white,
+    "white-20": rgb(255, 255, 255, 0.8),
+    "gradientStart": rgb(219, 43, 48),
+    "gradientEnd": rgb(125, 64, 151),
+    "gray": rgb(128, 128, 128),
+    "grayLight": rgba(0, 0, 0, 0.4),
+    "iconRed": rgb(183, 48, 88),
+    "yellow": rgb(253, 204, 82),
+    "twitter": rgb(29, 161, 242, 1),
+    "facebook": rgb(59, 91, 152, 1),
+    "google": rgb(221, 75, 57, 1),
+    "txt-muted": rgb(108 117 125),
+    
+  ),
+
+  fonts: (
+    'Catamaran': 'Catamaran',
+    'Lato': 'Lato',
+    'Muli': 'Mulish',
+    'fallback': (Helvetica, Arial, sans-serif),
+  ),
+
+  images: (
+    getStarted: "../img/bg-cta.jpg",
+    
+  ),
+
+  patterns: (
+    pattern1: '../img/bg-pattern.png',
+  ),
+);
+
+$fonts-muli: "muli", Helvetica, Arial, sans-serif;
+$fonts-lato: "lato", Helvetica, Arial, sans-serif;
+$fonts-catamaran: "catamaran", Helvetica, Arial, sans-serif;
+
+
