@@ -138,76 +138,78 @@ h3, .h3 {
   padding-left: 14%;
   padding-right: 18%;
 }
-.nav-container .navbar-bg-initial {
+.nav-container .navbar-initial {
   background-image: url("../img/bg-pattern.png"), linear-gradient(to right, #db2b30, #7d4097);
 }
-.nav-container .navbar-bg-initial .navbar-brand-initial {
+.nav-container .navbar-initial__brand {
   color: #fdcc52;
 }
-.nav-container .navbar-bg-initial .navbar-brand-initial:hover {
+.nav-container .navbar-initial__brand:hover {
   color: white;
 }
-.nav-container .navbar-bg-initial .navbar-link-initial {
+.nav-container .navbar-initial__link {
   color: rgba(255, 255, 255, 0.8) !important;
+  font-size: small;
 }
-.nav-container .navbar-bg-initial .navbar-link-initial:hover {
+.nav-container .navbar-initial__link:hover {
   color: white !important;
 }
-.nav-container .navbar-bg-scrolled {
+.nav-container .navbar-scrolled {
   background: white;
   color: rgba(0, 0, 0, 0.4);
 }
-.nav-container .navbar-bg-scrolled .navbar-brand-scrolled {
+.nav-container .navbar-scrolled__brand {
   color: black;
 }
-.nav-container .navbar-bg-scrolled .navbar-brand-scrolled:hover {
+.nav-container .navbar-scrolled__brand:hover {
   color: #fdcc52;
 }
-.nav-container .navbar-bg-scrolled .navbar-link-scrolled {
+.nav-container .navbar-scrolled__link {
   color: gray !important;
+  font-size: small;
 }
-.nav-container .navbar-bg-scrolled .navbar-link-scrolled:hover {
+.nav-container .navbar-scrolled__link:hover {
   color: #fdcc52 !important;
 }
 
 .top {
   background-image: url("../img/bg-pattern.png"), linear-gradient(to right, #db2b30, #7d4097);
 }
-.top .top__main-containter {
+.top__main-containter {
   justify-content: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.top .top__main-containter .top__inner-containter {
+.top__inner-containter {
   justify-content: center;
   align-items: center;
 }
-.top .top__main-containter .top__inner-containter .top__text-container {
+.top__text-container {
   color: white;
   text-align: center;
 }
 @media (min-width: 992px) {
-  .top .top__main-containter .top__inner-containter .top__text-container {
+  .top__text-container {
     text-align: left;
   }
 }
-.top .top__main-containter .top__inner-containter .top__text-container h1 {
+.top__text-container h1 {
   padding-bottom: 1.5rem;
 }
-.top .top__main-containter .top__inner-containter .top__text-container button {
+.top__text-container button {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 }
-.top .top__main-containter .top__inner-containter .top__phone-container {
+.top__phone-container {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.top .top__main-containter .top__inner-containter .top__phone-container div {
+.top__phone-container div {
   position: relative;
 }
-.top .top__main-containter .top__inner-containter .top__phone-container div .phone-outer {
+.top__phone-container div .phone-outer {
   width: 100%;
 }
-.top .top__main-containter .top__inner-containter .top__phone-container div .phone-inner {
+.top__phone-container div .phone-inner {
   position: absolute;
   top: 11%;
   left: 6%;
@@ -225,61 +227,61 @@ h3, .h3 {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.download .row .download__text-container {
+.download__text-container {
   text-align: center;
 }
-.download .row .download__link-container {
+.download__link-container {
   text-align: center;
 }
-.download .row .download__link-container a {
+.download__link-container a {
   text-decoration: none;
 }
-.download .row .download__link-container a img {
+.download__link-container a img {
   padding-bottom: 1rem;
 }
 
-#features hr {
+.features hr {
   background: linear-gradient(to right, #db2b30, #7d4097);
   margin: 0;
 }
-#features i {
+.features i {
   color: #b73058;
 }
-#features i.icon::before {
+.features i.icon::before {
   font-size: 4rem;
 }
-#features .features__main-container {
+.features__main-container {
   justify-content: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
 }
-#features .features__main-container .features__inner-container {
+.features__inner-container {
   justify-content: center;
   align-items: center;
 }
-#features .features__main-container .features__inner-container .features__phone-container {
+.features__phone-container {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-#features .features__main-container .features__inner-container .features__phone-container div {
+.features__phone-container div {
   position: relative;
 }
-#features .features__main-container .features__inner-container .features__phone-container div .phone-outer {
+.features__phone-container div .phone-outer {
   width: 100%;
 }
-#features .features__main-container .features__inner-container .features__phone-container div .phone-inner {
+.features__phone-container div .phone-inner {
   position: absolute;
   top: 11%;
   left: 6%;
   width: 89%;
 }
 @media (min-width: 576px) {
-  #features .features__main-container .features__inner-container .features__icon-container div {
+  .features__icon-container div {
     padding-top: 3rem;
   }
 }
-#features .features__main-container .features__inner-container .features__icon-container div h3 {
+.features__icon-container div h3 {
   margin-top: 1rem;
 }
 
@@ -287,10 +289,8 @@ h3, .h3 {
   background: rgba(0, 0, 0, 0.4) url("../img/bg-cta.jpg");
   background-blend-mode: darken;
   background-size: 100%;
-  /* background-position: 0px -135px; */
-  /* padding-bottom: 31%; */
 }
-.getStarted .getStarted__text-container {
+.getStarted__text-container {
   padding-top: 25%;
   padding-left: 15%;
   padding-bottom: 20%;

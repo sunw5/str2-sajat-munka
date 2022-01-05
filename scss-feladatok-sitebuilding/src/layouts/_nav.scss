@@ -1,48 +1,55 @@
-@use '../abstracts' as *;
+@use '../abstracts'as *;
 
 .nav-container {
   position: sticky;
   top: 0;
   z-index: 1020;
+
   .navbar {
     padding-left: 14%;
     padding-right: 18%;
   }
 
-  .navbar-bg-initial {
+  .navbar-initial {
     background-image: url(var('patterns.pattern1')), linear-gradient(to right, var('colors.gradientStart'), var('colors.gradientEnd'));
-      
-      .navbar-brand-initial {
+
+    &__brand {
       color: var('colors.yellow');
+
       &:hover {
         color: var('colors.white');
       }
     }
 
-    .navbar-link-initial {
+    &__link {
       color: var('colors.white-20') !important;
+      font-size: small;
+
       &:hover {
         color: var('colors.white') !important;
       }
-    }    
+    }
   }
 
-  .navbar-bg-scrolled {
-    background: var('colors.white');    
-    color: var('colors.grayLight');   
-    
-    .navbar-brand-scrolled {
+  .navbar-scrolled {
+    background: var('colors.white');
+    color: var('colors.grayLight');
+
+    &__brand {
       color: var('colors.black');
+
       &:hover {
         color: var('colors.yellow');
-      }      
+      }
     }
 
-    .navbar-link-scrolled {
+    &__link {
       color: var('colors.gray') !important;
+      font-size: small;
+
       &:hover {
         color: var('colors.yellow') !important;
       }
-    }    
+    }
   }
 }

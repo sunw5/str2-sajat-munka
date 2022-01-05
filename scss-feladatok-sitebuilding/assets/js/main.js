@@ -11,25 +11,25 @@ for (const link of links) {
 
 function NavbarOnScroll(e) {
   if (!scrolled && scrollY > 1) {
-    navbar.classList.toggle('navbar-bg-initial');
-    navbar.classList.toggle('navbar-bg-scrolled');
-    navbarBrand.classList.toggle('navbar-brand-initial');
-    navbarBrand.classList.toggle('navbar-brand-scrolled');
+    navbar.classList.toggle('navbar-initial');
+    navbar.classList.toggle('navbar-scrolled');
+    navbarBrand.classList.toggle('navbar-initial__brand');
+    navbarBrand.classList.toggle('navbar-scrolled__brand');
     for (link of navbarNavLinks) {
-      link.classList.toggle('navbar-link-initial');
-      link.classList.toggle('navbar-link-scrolled');
+      link.classList.toggle('navbar-initial__link');
+      link.classList.toggle('navbar-scrolled__link');
     }
     scrolled = true;
     return;
   }
   if (scrollY === 0) {
-    navbar.classList.toggle('navbar-bg-initial');
-    navbar.classList.toggle('navbar-bg-scrolled');
-    navbarBrand.classList.toggle('navbar-brand-initial');
-    navbarBrand.classList.toggle('navbar-brand-scrolled');
+    navbar.classList.toggle('navbar-initial');
+    navbar.classList.toggle('navbar-scrolled');
+    navbarBrand.classList.toggle('navbar-initial__brand');
+    navbarBrand.classList.toggle('navbar-scrolled__brand');
     for (link of navbarNavLinks) {
-      link.classList.toggle('navbar-link-initial');
-      link.classList.toggle('navbar-link-scrolled');
+      link.classList.toggle('navbar-initial__link');
+      link.classList.toggle('navbar-scrolled__link');
     }
     scrolled = false;
   }

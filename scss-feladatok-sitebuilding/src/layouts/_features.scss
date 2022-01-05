@@ -1,6 +1,6 @@
 @use '../abstracts'as *;
 
-#features {
+.features {
   hr {
     background: linear-gradient(to right, var('colors.gradientStart'), var('colors.gradientEnd'));
     margin: 0;
@@ -14,30 +14,32 @@
     }
   }
 
-  .features__main-container {
+  &__main-container {
     justify-content: center;
     padding-top: 3rem;
     padding-bottom: 3rem;
     text-align: center;
+  }
 
-    .features__inner-container {
-      justify-content: center;
-      align-items: center;
+  &__inner-container {
+    justify-content: center;
+    align-items: center;
+  }
 
-      .features__phone-container {
-        @include phone;
+  &__phone-container {
+    @include phone;
+  }
+
+  &__icon-container {
+    div {
+      @media (min-width: 576px) {
+        padding-top: 3rem;
       }
 
-      .features__icon-container {
-        div {
-          @media (min-width: 576px) {
-            padding-top: 3rem;
-          }
-          h3 {
-            margin-top: 1rem;
-          }
-        }
+      h3 {
+        margin-top: 1rem;
       }
     }
   }
+
 }
